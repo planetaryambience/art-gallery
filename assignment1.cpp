@@ -12,7 +12,7 @@
 #include <math.h>
 #include <cmath>
 #include <GL/freeglut.h>
-#include "C:\\Users\\jfu24\\Desktop\\cosc363-assignment1-main\\loadTGA.h"
+#include "loadTGA.h"
 
 using namespace std;
 
@@ -85,29 +85,29 @@ void loadTextures()
     glGenTextures(5, txId);                                             // create texture ids
 
     glBindTexture(GL_TEXTURE_2D, txId[0]);                              // scanimation
-    loadTGA("C:\\Users\\jfu24\\Desktop\\cosc363-assignment1-main\\scanimation.tga");
+    loadTGA("scanimation.tga");
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);   // texture params
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 
     glBindTexture(GL_TEXTURE_2D, txId[1]);                              // scanimation lines
-    loadTGA("C:\\Users\\jfu24\\Desktop\\cosc363-assignment1-main\\scanimationLines.tga");
+    loadTGA("scanimationLines.tga");
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);   // texture params
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 
     glBindTexture(GL_TEXTURE_2D, txId[2]);                              // rotating snakes static illusion
-    loadTGA("C:\\Users\\jfu24\\Desktop\\cosc363-assignment1-main\\rotatingSnakes.tga");
+    loadTGA("rotatingSnakes.tga");
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
     glBindTexture(GL_TEXTURE_2D, txId[3]);                              // static illusion
-    loadTGA("C:\\Users\\jfu24\\Desktop\\cosc363-assignment1-main\\staticIllusion.tga");
+    loadTGA("staticIllusion.tga");
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
     glBindTexture(GL_TEXTURE_2D, txId[4]);                              // background wall
-    loadTGA("C:\\Users\\jfu24\\Desktop\\cosc363-assignment1-main\\neonLines.tga");
+    loadTGA("neonLines.tga");
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
@@ -578,7 +578,7 @@ void initialize(void)
 {
     float red[] = { 1, 0, 0, 1 };
 
-    loadMeshFile("C:\\Users\\jfu24\\Desktop\\cosc363-assignment1-main\\amesWindow.off");
+    loadMeshFile("amesWindow.off");
     loadTextures();
 
     glClearColor(1.0, 1.0, 1.0, 1.0);       // background colour
